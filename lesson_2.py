@@ -45,3 +45,107 @@
 # print("Phone number: " + phone_number)
 
 # G:
+# def printHello():
+#     print("hello")
+
+# def calculate():
+#     print(5+3.2)
+
+# printHello()
+# calculate()
+
+# H:
+# 1.
+# def get_name():
+#     name = input("Enter your name: ")
+#     print(f"Your name is: {name}")
+
+# get_name()
+
+# 2.
+# def get_number():
+#     number = int(input("Enter a number: "))
+#     divided_by_two = number / 2
+#     print(f"The number divided by 2 is: {divided_by_two}")
+
+# get_number()
+
+# I:
+# 1.
+# def adds_numbers():
+#     first_number = int(input("Enter the first number: "))
+#     second_number = int(input("Enter the second number: "))
+#     print(f"The sum of the two numbers is: {first_number + second_number}")
+
+# adds_numbers()
+
+# 2.
+# def get_strings():
+#     first_string = input("Enter the first string: ")
+#     second_string = input("Enter the second string: ")
+#     print(f"The strings are: {first_string} {second_string}")
+
+# get_strings()
+
+# J:
+# list_of_numbers = [1, 2, 3]
+# for number in list_of_numbers:
+#     print(number)
+
+# K:
+# list_of_numbers = [1, 2, 3]
+# total = 0
+# for number in list_of_numbers:
+#     total += number
+# print(total)
+
+# L:
+# students = {"first_name": "Yossi", "last_name": "Shitrit", "age": 30}
+# for key in students:
+#     print(key)
+
+# M:
+# for star in range(1, 6):
+#     print("*" * star)
+
+# N:
+# i = 0
+# j = 4
+# for row in range(5):
+#     for column in range(5):
+#         if row == i and column == j:
+#             print("*", end="")
+#             i += 1
+#             j -= 1
+#         elif row == column:
+#             print("*", end="")
+#         else:
+#             print(" ", end="")
+#     print()
+
+
+# O:
+# 1.
+# def get_number():
+#     number = input("Enter a number with two digits: ")
+#     def adds_numbers():
+#         first_number = int(number[0])
+#         second_number = int(number[1])
+#         print(f"The sum of the two numbers is: {first_number + second_number}")
+#     adds_numbers()
+# get_number()
+
+def factorial(number):
+    # Validate input
+    if not isinstance(number, int):
+        raise TypeError("Sorry. 'number' must be an integer.")
+    if number < 0:
+        raise ValueError("Sorry. 'number' must be zero or positive.")
+    # Calculate the factorial of number
+    def inner_factorial(number):
+        if number <= 1:
+            return 1
+        return number * inner_factorial(number - 1)
+    return inner_factorial(number)
+
+factorial(4)
