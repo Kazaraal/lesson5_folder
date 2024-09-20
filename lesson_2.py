@@ -128,24 +128,31 @@
 # 1.
 # def get_number():
 #     number = input("Enter a number with two digits: ")
-#     def adds_numbers():
-#         first_number = int(number[0])
-#         second_number = int(number[1])
-#         print(f"The sum of the two numbers is: {first_number + second_number}")
-#     adds_numbers()
-# get_number()
+#     return number
 
-def factorial(number):
-    # Validate input
-    if not isinstance(number, int):
-        raise TypeError("Sorry. 'number' must be an integer.")
-    if number < 0:
-        raise ValueError("Sorry. 'number' must be zero or positive.")
-    # Calculate the factorial of number
-    def inner_factorial(number):
-        if number <= 1:
-            return 1
-        return number * inner_factorial(number - 1)
-    return inner_factorial(number)
+# def adds_numbers(number):
+#     first_number = int(number[0])
+#     second_number = int(number[1])
+#     print(f"The sum of the two numbers is: {first_number + second_number}")
+# adds_numbers(get_number())
 
-factorial(4)
+# P:
+# Convert tuple to string
+# tup = ('h', 'e', 'l', 'l', 'o')
+# str =  ''.join(tup)
+# print(str)
+
+# Q:
+# lst = [41, 22, 13, 64, 35]
+
+# def smallest_number(lst):
+#     if len(lst) == 0:
+#         return None
+#     smallest = lst[0]
+#     for number in lst:
+#         if number < smallest:
+#             smallest = number
+#     return smallest
+
+# sm_num = smallest_number(lst)
+# print(sm_num)
