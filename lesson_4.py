@@ -152,3 +152,159 @@
 
 # time.sleep(10)
 #################################################################################
+
+# # 6.
+# # Open Chrome browser on Google Translate website:
+# # https://translate.google.com/
+# #  Find translation text field (the one you send keys to)
+# # with 3 different locators and print the WebElement
+# # you created.
+
+# # Import webdriver
+# from selenium import webdriver
+# # Import By
+# from selenium.webdriver.common.by import By
+# # Import keys
+# from selenium.webdriver.common.keys import Keys
+# # Import time
+# import time
+
+# # Initialize the webdriver
+# chrome_driver = webdriver.Chrome()
+
+# # Get the website
+# website = "https://translate.google.com/"
+
+# chrome_driver.get(website)
+# time.sleep(5)
+
+# # This accepts the cookies
+# accept_cookies = chrome_driver.find_element(By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div/div/div[2]/div[1]/div[3]/div[1]/div[1]/form[2]/div/div/button").click()
+# time.sleep(3)
+
+# # WebElement created
+# # <textarea aria-label="Source text" aria-autocomplete="list" aria-expanded="false" aria-controls="kvLWu" class="er8xn" jsaction="blur:TP1Wfd; click:R8nDBd; focus:HCeAxb; input:r9XDpf,Gyn8rd; keydown:O0Dsab,RHer4; select:BR6jm,RHer4; paste:puy29d;" jsname="BJE2fc" jslog="176025; track:click,input,paste;" autocapitalize="off" autocomplete="off" autocorrect="off" role="combobox" rows="1" placeholder="" spellcheck="false" style="height: 32px;"></textarea>
+
+# # cssSelector
+# # #yDmH0d > c-wiz > div > div.ToWKne > c-wiz > div.OlSOob > c-wiz > div.ccvoYb > div.AxqVh > div.OPPzxe > div > c-wiz > span > span > div > textarea
+
+# # XPATH
+# # //*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/div/c-wiz/span/span/div/textarea
+
+# # class name
+# # driver.find_element(By.className("rm1UF UnxENd"))
+################################################################################################################################################################
+
+# # 7.
+# # Open Chrome browser on Facebook website
+# # https://www.facebook.com/
+# #  Login into Facebook (No need to send me credentials).
+
+# Import webdriver
+# from selenium import webdriver
+# # Import By
+# from selenium.webdriver.common.by import By
+# # Import Keys
+# from selenium.webdriver.common.keys import Keys
+# # Import time
+# import time
+
+# # Initialize the webdriver
+# chrome_driver = webdriver.Chrome()
+# # Give the website a variable
+# website = "https://www.facebook.com/"
+
+# # Open the website
+# chrome_driver.get(website)
+# chrome_driver.maximize_window()
+
+# # Decline optional cookies
+# path = "//*[@id='facebook']/body/div[3]/div[2]/div/div/div/div/div[3]/div[2]/div/div[1]"
+# decline_optional_cookies = chrome_driver.find_element(By.XPATH, path)
+# decline_optional_cookies.click()
+
+# # Put a delay here
+# time.sleep(3)
+
+# # Fill in email
+# email_address = "kk@gmail.com"
+# path_to_email = "//input[@id='email']"
+# email_location = chrome_driver.find_element(By.XPATH, path_to_email)
+# email_location.send_keys(email_address)
+
+# # Fill in password
+# password = "1234567890"
+# path_to_password = "//input[@id='pass']"
+# password_location = chrome_driver.find_element(By.XPATH, path_to_password)
+# password_location.send_keys(password)
+# password_location.send_keys(Keys.ENTER)
+
+# # Delay the closing
+# time.sleep(25)
+#########################################################################################
+
+# # 8.
+# # Open Chrome browser on any webpage.
+# # Delete all cookies from browser.
+# # Make sure all cookies are deleted by printing all cookies
+# # stored in the browser.
+
+# # Import webdriver
+# from selenium import webdriver
+# # Import By
+# from selenium.webdriver.common.by import By
+# # Import ChromeDriverManager
+# from webdriver_manager.chrome import ChromeDriverManager
+# # Import time
+# import time
+
+# # Initialize the webdriver
+# chrome_driver = webdriver.Chrome()
+# # Give the website a variable
+# website = "https://www.facebook.com/"
+
+# # # Create a cookie
+# # cookie = {
+# #         'name': 'cookie_name',
+# #         'value': 'cookie_value',
+# #         'path': '/',
+# #         'domain': "https://www.facebook.com/",
+# #         'secure': False, # Set to True if the cookie should be secure
+# #         'httpOnly': False, # Set to True if the cookie should be HTTP only
+# #     }
+
+# chrome_driver.get(website)
+# chrome_driver.maximize_window()
+
+# # Accept cookies
+# allow_all_cookies = chrome_driver.find_element(By.XPATH, "//*[@id='facebook']/body/div[3]/div[2]/div/div/div/div/div[3]/div[2]/div/div[2]/div[1]/div/div[1]")
+# allow_all_cookies.click()
+
+# # Decline cookies
+# # decline_optional_cookies = chrome_driver.find_element(By.XPATH, "//*[@id='facebook']/body/div[3]/div[2]/div/div/div/div/div[3]/div[2]/div/div[1]/div[2]")
+# # decline_optional_cookies.click()
+
+# # Delay here
+# time.sleep(3)
+
+# # Get cookies and print them on screen
+# cookies = chrome_driver.get_cookies()
+# print(cookies)
+
+# # Delay here
+# time.sleep(5)
+
+# # chrome_driver.add_cookie(cookie)
+# chrome_driver.delete_all_cookies()
+
+# # Delay here
+# time.sleep(5)
+
+# # Get cookies and print them on screen
+# cookies = chrome_driver.get_cookies()
+# print(cookies)
+
+# # Delay here
+# time.sleep(5)
+
+
