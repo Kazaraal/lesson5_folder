@@ -306,5 +306,90 @@
 
 # # Delay here
 # time.sleep(5)
+#######################################################################################################
+
+# # 9.
+# # Open any browser on "Github" website.
+# #  https://github.com/
+# #  Enter “Selenium” keyword in search textfield
+# #  Press Enter to search (through code - of course).
+
+# # Import Selenium
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.keys import Keys
+# import time
+
+# # Initialize webdriver
+# chrome_driver = webdriver.Chrome()
+
+# # Open website
+# website = "https://github.com"
+# chrome_driver.get(website)
+# chrome_driver.maximize_window()
+
+# # Delay here
+# time.sleep(3)
+
+# # Click on the search button
+# search_button = chrome_driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/header/div/div[2]/div/div/qbsearch-input")
+# search_button.click()
+
+# # Add the words selenium in the search bar
+# add_words_in_search_bar = chrome_driver.find_element(By.ID, "query-builder-test")
+# add_words_in_search_bar.send_keys("selenium")
+# # This presses enter
+# add_words_in_search_bar.send_keys(Keys.ENTER)
+
+# # Delay here
+# time.sleep(13)
+#####################################################################################
+
+# 10.
+# Find a way to disable all extensions in
+# o Chrome
+# o Firefox
+# o Internet Explorer.
+#  Run browsers without extensions.
+
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
+# import time
+
+# website = "https://www.facebook.com"
+
+# # This is the webdriver for chrome
+# def chrome_browser():
+#     chrome_driver   = webdriver.Chrome()
+#     chrome_driver.get(website)
+#     chrome_options = webdriver.ChromeOptions()
+#     # Disable extensions
+#     chrome_options.add_argument('--disable-extensions')
+#     time.sleep(4)
+#     chrome_driver.quit()
+
+# chrome_browser()
 
 
+# # This is the webdriver for chrome
+# def firefox_browser():
+#     firefox_driver  = webdriver.Firefox()
+#     firefox_driver.get(website)
+#     firefox_options = webdriver.FirefoxOptions()
+#     firefox_options.add_argument('--disable-extensions')
+#     time.sleep(44)
+#     firefox_driver.quit()
+
+# firefox_browser()
+
+
+# # This is the webdriver for Internet Explorer
+# def ie_browser():
+#     ie_driver  = webdriver.Ie()
+#     ie_driver.get(website)
+#     ie_options = webdriver.IeOptions()
+#     ie_options.add_argument('--disable-extensions')
+#     time.sleep(4)
+#     ie_driver.quit()
+
+# ie_browser()
