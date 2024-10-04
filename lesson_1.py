@@ -1,4 +1,6 @@
-# A:
+# This is lesson 1 assignment
+
+# # A:
 # first = 7
 # second = 44.3
 # print(first + second)

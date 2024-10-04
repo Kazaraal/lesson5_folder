@@ -1,4 +1,6 @@
-# 1.
+# This is lesson 3 assignment
+
+# # 1.
 # a = 1/0
 
 # 2.
