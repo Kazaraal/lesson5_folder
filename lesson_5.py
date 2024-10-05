@@ -17,18 +17,27 @@
 # Create a new Python project (any) and upload it to Github
 
 ## Create a new repository on the command line
-# echo "a testing app" > test.txt
+# echo "print("Welcome")" > test.py
 # git init
-# git add test.txt
+# git add test.py
 # git commit -m "The first commit"
 # git branch -M main
 # git remote add origin https://github.com/Kazaraal/lesson5_folder.git 
 # git push origin main
+
+# Answer
+# https://github.com/Kazaraal/lesson5_folder.git
 #########################################################################
 
 # 4.
 # Create a branch in your project repository
 # git branch <branch_name>
+
+# Answer
+# ken@kens:~/Desktop/DevOps_Online_Training/github/lesson5_folder$ git branch --list
+#   alta
+# * main
+#   master
 ###########################################################################
 
 # # 5.
@@ -69,7 +78,7 @@
 # # Merge the new alta branch into the master branch
 # git merge alta
 
-# ##
+# ## Answer
 # Error message
 # Auto-merging test.txt
 # CONFLICT (content): Merge conflict in test.txt
@@ -85,6 +94,10 @@
 # # Check out a specific commit using commit hash.
 # git checkout bcbc0b5e2adbec6cba036c2fb2c59e8d87c0fc3c
 
+# Answer
+# Previous HEAD position was bcbc0b5 The first edit text
+# HEAD is now at ceaf8c0 This is just a test!
+
 # # Verify Detached Head status
 # git status
 ########################################################################
@@ -92,3 +105,8 @@
 # 7.
 # Reset (hard) to a specific commit
 # git reset --hard <commit>
+
+# Answer 
+# git reset --hard 5aef6d211e7315f08ee88053d52e69577c9d80ca
+# HEAD is now at 5aef6d2 another test
+
